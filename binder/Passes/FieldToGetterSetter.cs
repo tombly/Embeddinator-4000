@@ -20,6 +20,12 @@ namespace Embeddinator.Passes
             if (!field.IsGenerated)
                 return false;
 
+            if (Embeddinator.Custom.AppCompatV7.Skip(field.QualifiedName) == true)
+            {
+                Diagnostics.Debug($"Skipping {field.QualifiedName} due to AppCompatV7");
+                return false;
+            }
+
             field.GenerationKind = GenerationKind.None;
 
             var @class = field.Namespace as Class;
