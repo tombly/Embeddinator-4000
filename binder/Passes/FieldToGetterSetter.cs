@@ -20,9 +20,8 @@ namespace Embeddinator.Passes
             if (!field.IsGenerated)
                 return false;
 
-            if (Embeddinator.Custom.AppCompatV7.Skip(field.QualifiedName) == true)
-            {
-                Diagnostics.Debug($"Skipping {field.QualifiedName} due to AppCompatV7");
+            if(field.QualifiedName.StartsWith("Mobile_AndroidOS")) {
+                Diagnostics.Debug($"Skipping {field.QualifiedName} due to prefix");
                 return false;
             }
 

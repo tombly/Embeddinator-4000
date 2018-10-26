@@ -11,7 +11,6 @@
     <AssemblyName>Embeddinator-4000</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <BaseIntermediateOutputPath>..\obj\Debug\Embeddinator-4000</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -141,8 +140,8 @@
     <Compile Include="../../binder/Parser.cs">
       <Link>binder/Parser.cs</Link>
     </Compile>
-    <Compile Include="..\..\binder\Passes\CheckDeclarationsPass.cs">
-      <Link>binder\Passes\CheckDeclarationsPass.cs</Link>
+    <Compile Include="../../binder/Passes/CheckDeclarationsPass.cs">
+      <Link>binder/Passes/CheckDeclarationsPass.cs</Link>
     </Compile>
     <Compile Include="../../binder/Passes/CheckReservedKeywordsPass.cs">
       <Link>binder/Passes/CheckReservedKeywordsPass.cs</Link>
